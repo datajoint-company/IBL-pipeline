@@ -480,7 +480,7 @@ class Tag(dj.Lookup):
 @schema
 class SessionTag(dj.Computed):
     definition = """
-    -> Session
+    -> acquisition.Session
     """
 
     class Tag(dj.Part):
