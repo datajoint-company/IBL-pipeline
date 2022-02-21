@@ -1,3 +1,6 @@
+# Requites datajoint_utilities
+# pip install git+https://github.com/vathes/datajoint-utilities.git
+
 import datajoint as dj
 
 assert 'custom' in dj.config
