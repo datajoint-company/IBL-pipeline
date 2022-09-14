@@ -1,14 +1,14 @@
-import datajoint as dj
-from ibl_pipeline import reference, subject
-from ibl_pipeline.action_shared import ProcedureType
 import os
 
-mode = dj.config.get('custom', {}).get('database.mode', "")
+import datajoint as dj
 
-if mode == 'update':
-    schema = dj.schema('ibl_action')
+from ibl_pipeline import mode, reference, subject
+from ibl_pipeline.action_shared import ProcedureType
+
+if mode == "update":
+    schema = dj.schema("ibl_action")
 else:
-    schema = dj.schema(dj.config.get('database.prefix', '') + 'ibl_action')
+    schema = dj.schema(dj.config.get("database.prefix", "") + "ibl_action")
 
 
 @schema
