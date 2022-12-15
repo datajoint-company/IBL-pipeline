@@ -129,7 +129,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push iblenv
-        if: env.REBUILD_IBLENV == 'true'
+        if: env.REBUILD_IBLENV != 'false'
         id: docker_build_iblenv
         uses: docker/build-push-action@v2
         with:
